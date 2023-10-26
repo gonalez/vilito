@@ -15,8 +15,13 @@
  */
 package io.github.gonalez.vilito.inventory.bukkit
 
-import io.github.gonalez.vilito.inventory.VilitoInventory
-import org.bukkit.inventory.Inventory
+import io.github.gonalez.vilito.inventory.VilitoInventoryElement
+import org.bukkit.inventory.ItemStack
 
-/** VilitoInventory that renders itself to a bukkit inventory. */
-interface BukkitVilitoInventory : VilitoInventory<Inventory>
+/**
+ * Inventory element designed to be compatible with a [BukkitVilitoInventory]. It utilizes ItemStack
+ * as its content type, which aligns with Bukkit inventories that primarily handle item stacks.
+ *
+ * @param <T> the type of content contained within this element.
+ */
+interface BukkitVilitoInventoryElement<T : ItemStack> : VilitoInventoryElement<T>
