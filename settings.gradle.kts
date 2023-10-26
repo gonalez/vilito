@@ -15,5 +15,4 @@
  */
 
 rootProject.name = "vilito"
-include("core")
-include("bukkit")
+include("core", "bukkit")
